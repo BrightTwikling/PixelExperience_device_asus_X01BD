@@ -38,6 +38,10 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 BUILD_FINGERPRINT := "asus/WW_X01BD/ASUS_X01BD_1:10/QKQ1/17.2018.2012.434-20201203:user/release-keys"
 
 ###########################################
+DEVICE_PACKAGE_OVERLAYS += \
+    $(LOCAL_PATH)/overlay-evo
+
+###########################################
 # OmniSwitch
 PRODUCT_PACKAGES += \
     com.android.phone.common \
