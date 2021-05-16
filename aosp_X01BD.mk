@@ -36,3 +36,32 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 
 # Build fingerprint
 BUILD_FINGERPRINT := "asus/WW_X01BD/ASUS_X01BD_1:10/QKQ1/17.2018.2012.434-20201203:user/release-keys"
+
+###########################################
+# OmniSwitch
+PRODUCT_PACKAGES += \
+    com.android.phone.common \
+    OmniSwitch \
+    Snap \
+    LatinIME \
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/privapp-permissions-OmniSwitch.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-OmniSwitch.xml
+
+# Solve miss-connection of Bluetooth
+###########################################
+# A2DP offload enabled for compilation
+AUDIO_FEATURE_ENABLED_A2DP_OFFLOAD := true
+
+# A2DP offload supported
+PRODUCT_PROPERTY_OVERRIDES += \
+ro.bluetooth.a2dp_offload.supported=true
+
+# A2DP offload disabled (UI toggle property)
+PRODUCT_PROPERTY_OVERRIDES += \
+persist.bluetooth.a2dp_offload.disabled=false
+
+# A2DP offload DSP supported encoder list
+PRODUCT_PROPERTY_OVERRIDES += \
+persist.bluetooth.a2dp_offload.cap=sbc-aac-aptx-aptxhd-
+###########################################
