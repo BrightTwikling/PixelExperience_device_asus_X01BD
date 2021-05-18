@@ -45,7 +45,8 @@ DEVICE_PACKAGE_OVERLAYS += \
 PRODUCT_PACKAGES += \
     com.android.phone.common \
     OmniSwitch \
-    Snap
+    Snap \
+    LatinIME \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/privapp-permissions-OmniSwitch.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-OmniSwitch.xml
