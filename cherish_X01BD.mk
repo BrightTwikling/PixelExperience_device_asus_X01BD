@@ -46,7 +46,7 @@ PRODUCT_PACKAGES += \
     com.android.phone.common \
     OmniSwitch \
     Snap \
-    LatinIME \
+    LatinIME
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/privapp-permissions-OmniSwitch.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-OmniSwitch.xml
@@ -69,6 +69,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 persist.bluetooth.a2dp_offload.cap=sbc-aac-aptx-aptxhd-
 ###########################################
 
-#CHERISH_NONGAPPS := true
+WITH_GMS := true
 
 -include vendor/FromEvolution/config/apps.mk
